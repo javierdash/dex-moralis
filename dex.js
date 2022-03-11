@@ -1,8 +1,8 @@
-require("dotenv").config();
+//require('dotenv').config();
 
 // connect to Moralis server
-const serverUrl = process.env.SERVER_URL
-const appId = process.env.APP_ID
+const serverUrl = "https://n2rpt10qfadc.usemoralis.com:2053/server"
+const appId = "YyCSuMjEZYCGqI8bNjadovtyL9SVRAFUF5uzveGQ4"
 Moralis.start({ serverUrl, appId });
 
 const $tokenBalanceTBody = document.querySelector('.js-token-balances');
