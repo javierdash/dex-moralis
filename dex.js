@@ -5,6 +5,10 @@ const serverUrl = "https://n2rpt10qfadc.usemoralis.com:2053/server"
 const appId = "YyCSuMjEZYCGqI8bNjadovtyL9SVRAFUF5uzveGQ4"
 Moralis.start({ serverUrl, appId });
 
+Moralis
+    .initPlugins()
+    .then(() => console.log('Plugins have been initialized YEAAAH'));
+
 const $tokenBalanceTBody = document.querySelector('.js-token-balances');
 const $selectedToken = document.querySelector('.js-from-token');
 const $amountInput = document.querySelector('.js-from-amount');
@@ -68,12 +72,21 @@ async function getStats() {
 
 }
 
+async function buyCrytpo() {
+    Moralis.Plugins.fiat.buy();
+}
+
+
 async function logOut() {
     await Moralis.User.logOut();
     console.log("logged out");
   }
 
   document.querySelector("#btn-login").addEventListener('click', login);
+  document
+        .getElementById("btn-buy-crypto")
+        .addEventListener('click', buyCrytpo);
+
   document.getElementById("btn-logout").addEventListener('click', logOut);
 
 /** Quote/Swap */
