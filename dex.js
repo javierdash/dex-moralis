@@ -1,8 +1,8 @@
 //require('dotenv').config();
 
 // connect to Moralis server
-const serverUrl = "https://n2rpt10qfadc.usemoralis.com:2053/server"
-const appId = "YyCSuMjEZYCGqI8bNjadovtyL9SVRAFUF5uzveGQ4"
+const serverUrl = "https://kjfkhnisfbja.usemoralis.com:2053/server"
+const appId = "7R1AtAtDI0yqorQVwB9Fjs6Dko0QJkp1Ye6vzJlJ"
 Moralis.start({ serverUrl, appId });
 
 Moralis
