@@ -161,7 +161,7 @@ async function getTop10Tokens() {
             .filter(token => token.rank >=1 && token.rank <= 30)
             .map(token => token.symbol);
 
-
+}
 async function getTickerData(tickerList) {
     const tokens = await Moralis.Plugins.oneInch.getSupportedTokens({
         chain: 'polygon',
@@ -184,5 +184,5 @@ getTop10Tokens()
     .then(getTickerData)
     .then(renderTokenDropdown);
 
-}
+
 
