@@ -1,3 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-auto;
+}
+
+body {
+    background-color: beige;
+}
+
 .error {
     color: darkred;
+}
+
+.exchange-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 4rem;
+}
+
+.form-row {
+    margin: 0.33rem;
+}
+
+body {
+    background-color: black;
+    color: whitesmoke;
+}
+
+.btn-sm {
+    margin: 8px;
 }
